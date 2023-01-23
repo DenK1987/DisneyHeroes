@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "446828740984",
+    "project_id": "disneyheroes-2b839",
+    "storage_bucket": "disneyheroes-2b839.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:446828740984:android:6f526ff395816d8d11488d",
+        "android_client_info": {
+          "package_name": "com.example.disneyheroes"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "446828740984-qavo7t2f984up01i2gtuc3sf54h9rtqb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBBA5kftG73FDYjhpVWLOZqqx79NF-dvFU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "446828740984-qavo7t2f984up01i2gtuc3sf54h9rtqb.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
