@@ -5,6 +5,10 @@ plugins {
     id 'kotlin-parcelize'
     id 'dagger.hilt.android.plugin'
     id 'androidx.navigation.safeargs.kotlin'
+    //Firebase
+    id 'com.google.gms.google-services'
+    //Add the Crashlytics Gradle plugin
+    id 'com.google.firebase.crashlytics'
 }
 
 android {
@@ -77,11 +81,21 @@ dependencies {
     //Lottie
     implementation 'com.airbnb.android:lottie:5.2.0'
 
+    //Flexbox
+    implementation 'com.google.android.flexbox:flexbox:3.0.0'
+
     //Circle indicator
     implementation 'me.relex:circleindicator:2.1.6'
 
     //Paging
     implementation 'androidx.paging:paging-runtime:3.1.1'
+
+    //Import the BoM for the Firebase platform
+    implementation platform('com.google.firebase:firebase-bom:31.1.1')
+
+    //Add the dependencies for the Crashlytics (and Analytics) libraries
+    //When using the BoM, you don't specify versions in Firebase library dependencies
+    implementation 'com.google.firebase:firebase-crashlytics-ktx'
 
     //Navigation
     def nav_version = "2.5.3"

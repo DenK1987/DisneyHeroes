@@ -1,5 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/User/AndroidStudioProjects/DisneyHeroes/app/src/main/res/drawable-v24/bg_button.xml" value="0.226" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/DisneyHeroes/app/src/main/res/drawable-v24/bg_image_button_checked.xml" value="0.226" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/DisneyHeroes/app/src/main/res/drawable-v24/bg_image_button_unchecked.xml" value="0.226" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/DisneyHeroes/app/src/main/res/drawable/bg_button.xml" value="0.226" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/DisneyHeroes/app/src/main/res/drawable/bg_image_button_back.xml" value="0.226" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/DisneyHeroes/app/src/main/res/drawable/bg_image_button_checked.xml" value="0.226" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/DisneyHeroes/app/src/main/res/drawable/bg_image_button_like.xml" value="0.226" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/DisneyHeroes/app/src/main/res/drawable/bg_image_button_unchecked.xml" value="0.226" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/DisneyHeroes/app/src/main/res/drawable/bg_image_hero.xml" value="0.226" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/DisneyHeroes/app/src/main/res/drawable/bg_name_category.xml" value="0.226" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/DisneyHeroes/app/src/main/res/drawable/ic_baseline_arrow_back_24.xml" value="0.226" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/DisneyHeroes/app/src/main/res/drawable/ic_baseline_arrow_back_30.xml" value="0.226" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/DisneyHeroes/app/src/main/res/drawable/ic_baseline_favorite_24.xml" value="0.226" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/DisneyHeroes/app/src/main/res/drawable/ic_baseline_favorite_30.xml" value="0.226" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/DisneyHeroes/app/src/main/res/drawable/ic_baseline_favorite_border_30.xml" value="0.226" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/DisneyHeroes/app/src/main/res/font/abeezee.xml" value="0.39076923076923076" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/DisneyHeroes/app/src/main/res/layout/activity_main.xml" value="0.35260416666666666" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/DisneyHeroes/app/src/main/res/layout/fragment_list_heroes.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/DisneyHeroes/app/src/main/res/layout/fragment_one_hero.xml" value="0.365625" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/DisneyHeroes/app/src/main/res/layout/fragment_page.xml" value="0.365625" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/DisneyHeroes/app/src/main/res/layout/fragment_start_app.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/DisneyHeroes/app/src/main/res/layout/fragment_tab.xml" value="0.365625" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/DisneyHeroes/app/src/main/res/layout/item_category_data.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/DisneyHeroes/app/src/main/res/layout/item_hero.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/DisneyHeroes/app/src/main/res/layout/item_hero_info.xml" value="0.365625" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/DisneyHeroes/app/src/main/res/layout/item_list_info.xml" value="0.365625" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/DisneyHeroes/app/src/main/res/layout/item_name_info.xml" value="0.36666666666666664" />
+      </map>
+    </option>
+  </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
