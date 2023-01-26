@@ -1,12 +1,7 @@
 package com.example.disneyheroes
 
 import android.app.Application
-import com.example.disneyheroes.db.DataBase
+import dagger.hilt.android.HiltAndroidApp
 
-class App : Application() {
-
-    override fun onCreate() {
-        super.onCreate()
-        DataBase.initDB(applicationContext)
-    }
-}
+@HiltAndroidApp
+class App : Application()

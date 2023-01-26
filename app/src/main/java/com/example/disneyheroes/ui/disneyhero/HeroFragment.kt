@@ -12,12 +12,13 @@ import com.example.disneyheroes.R
 import com.example.disneyheroes.databinding.FragmentHeroBinding
 import com.example.disneyheroes.models.DisneyHero
 import com.example.disneyheroes.models.InfoHero
-import com.example.disneyheroes.repositories.SharedPreferencesRepository
 import com.example.disneyheroes.ui.disneyhero.infoheroadapter.InfoHeroAdapter
 import com.example.disneyheroes.ui.listdisneyheroes.ListHeroesFragment
 import com.example.disneyheroes.utils.loadUrl
 import com.example.disneyheroes.utils.navigationFragments
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class HeroFragment : Fragment() {
 
     private lateinit var binding: FragmentHeroBinding
@@ -40,8 +41,6 @@ class HeroFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val sharPrefRep = SharedPreferencesRepository(requireContext())
-
         binding.buttonBack.setOnClickListener {
             navigationFragments(parentFragmentManager, ListHeroesFragment())
         }
@@ -49,11 +48,11 @@ class HeroFragment : Fragment() {
         binding.buttonLike.setOnClickListener {
             if (!currentHero.isFavorite) {
                 binding.buttonLike.setImageResource(R.drawable.ic_baseline_favorite_30)
-                sharPrefRep.setFavoriteHero(currentHero.id.toString(), true)
+                viewModel.setFavoriteHero(currentHero.id.toString(), true)
                 viewModel.selectFavoriteHero(currentHero)
             } else {
                 binding.buttonLike.setImageResource(R.drawable.ic_baseline_favorite_border_30)
-                sharPrefRep.setFavoriteHero(currentHero.id.toString(), false)
+                viewModel.setFavoriteHero(currentHero.id.toString(), false)
                 viewModel.selectFavoriteHero(currentHero)
             }
         }
@@ -63,7 +62,7 @@ class HeroFragment : Fragment() {
             binding.textNameHero.text = it.name
             binding.imageHero.loadUrl(it.imageUrl)
             setList(it.listInfo)
-            val flagFavorite = sharPrefRep.getFavoriteHero(currentHero.id.toString())
+            val flagFavorite = viewModel.getFavoriteHero(currentHero.id.toString())
             isFavoriteHero = if (isFavoriteHero != flagFavorite) {
                 binding.buttonLike.setImageResource(R.drawable.ic_baseline_favorite_30)
                 true

@@ -7,12 +7,15 @@ import androidx.lifecycle.viewModelScope
 import com.example.disneyheroes.models.DisneyHero
 import com.example.disneyheroes.repositories.DisneyHeroesRepository
 import com.example.disneyheroes.utils.toListDisneyHero
+import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
+import javax.inject.Inject
 
-class ListHeroesViewModel : ViewModel() {
-
-    private val repository = DisneyHeroesRepository()
+@HiltViewModel
+class ListHeroesViewModel @Inject constructor(
+    private val repository: DisneyHeroesRepository
+)  : ViewModel() {
 
     private val _listHeroes = MutableLiveData<List<DisneyHero>>()
     val listHeroes: LiveData<List<DisneyHero>> = _listHeroes

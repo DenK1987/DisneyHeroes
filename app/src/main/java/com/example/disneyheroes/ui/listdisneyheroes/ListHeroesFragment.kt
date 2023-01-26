@@ -15,7 +15,10 @@ import com.example.disneyheroes.ui.disneyhero.HeroFragment
 import com.example.disneyheroes.ui.listdisneyheroes.adapter.FavoriteHeroesAdapter
 import com.example.disneyheroes.ui.listdisneyheroes.adapter.HeroesAdapter
 import com.example.disneyheroes.utils.navigationFragments
+import com.example.disneyheroes.utils.navigationFragmentsAndAddToBackStack
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class ListHeroesFragment : Fragment() {
 
     private lateinit var binding: FragmentListHeroesBinding
@@ -71,7 +74,7 @@ class ListHeroesFragment : Fragment() {
         binding.listHeroes.run {
             if (adapter == null) {
                 adapter = HeroesAdapter {
-                    navigationFragments(
+                    navigationFragmentsAndAddToBackStack(
                         parentFragmentManager,
                         HeroFragment.newInstance(it.id.toString())
                     )
@@ -86,7 +89,7 @@ class ListHeroesFragment : Fragment() {
         recyclerFavoriteHeroes = binding.listHeroes
         recyclerFavoriteHeroes.run {
             adapter = FavoriteHeroesAdapter {
-                navigationFragments(
+                navigationFragmentsAndAddToBackStack(
                     parentFragmentManager,
                     HeroFragment.newInstance(it.id.toString())
                 )

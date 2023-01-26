@@ -7,9 +7,11 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.example.disneyheroes.databinding.FragmentStartAppBinding
 import com.example.disneyheroes.ui.listdisneyheroes.ListHeroesFragment
-
 import com.example.disneyheroes.utils.navigationFragments
+import com.example.disneyheroes.utils.navigationFragmentsAndAddToBackStack
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class StartAppFragment : Fragment() {
 
     private lateinit var binding: FragmentStartAppBinding
@@ -27,7 +29,7 @@ class StartAppFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         binding.buttonGetStarted.setOnClickListener {
-            navigationFragments(parentFragmentManager, ListHeroesFragment())
+            navigationFragmentsAndAddToBackStack(parentFragmentManager, ListHeroesFragment())
         }
     }
 }

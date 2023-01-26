@@ -1,33 +1,35 @@
 package com.example.disneyheroes.repositories
 
-import com.example.disneyheroes.db.DataBase
+import com.example.disneyheroes.db.DisneyHeroDao
 import com.example.disneyheroes.models.DisneyHero
-import com.example.disneyheroes.network.Network
+import com.example.disneyheroes.network.DisneyHeroesApi
 import com.example.disneyheroes.network.models.AllDisneyHeroesResponse
 import com.example.disneyheroes.network.models.DisneyHeroResponse
 import retrofit2.Response
+import javax.inject.Inject
 
-class DisneyHeroesRepository {
-
-    private val network = Network()
+class DisneyHeroesRepository @Inject constructor(
+    private val api: DisneyHeroesApi,
+    private val heroDao: DisneyHeroDao
+) {
 
     suspend fun getDisneyHeroes(): Response<AllDisneyHeroesResponse> {
-        return network.getDisneyHeroesApi().getDisneyHeroes()
+        return api.getDisneyHeroes()
     }
 
     suspend fun getImageDisneyHero(id: String): Response<DisneyHeroResponse> {
-        return network.getDisneyHeroesApi().getImageDisneyHero(id)
+        return api.getImageDisneyHero(id)
     }
 
     suspend fun getFavoriteDisneyHeroes(): List<DisneyHero> {
-        return DataBase.db.heroDao().getFavoriteDisneyHeroes()
+        return heroDao.getFavoriteDisneyHeroes()
     }
 
     suspend fun addHeroToFavorite(hero: DisneyHero) {
-        DataBase.db.heroDao().addHero(hero)
+        heroDao.addHero(hero)
     }
 
     suspend fun deleteHeroFromFavorite(hero: DisneyHero) {
-        DataBase.db.heroDao().deleteHero(hero)
+        heroDao.deleteHero(hero)
     }
 }

@@ -9,3 +9,10 @@ fun navigationFragments(manager: FragmentManager, fragment: Fragment) {
         .replace(R.id.container, fragment)
         .commit()
 }
+
+fun navigationFragmentsAndAddToBackStack(manager: FragmentManager, fragment: Fragment) {
+    manager.beginTransaction()
+        .replace(R.id.container, fragment)
+        .addToBackStack("")
+        .commit()
+}
