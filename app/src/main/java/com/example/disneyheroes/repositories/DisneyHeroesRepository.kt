@@ -13,8 +13,8 @@ class DisneyHeroesRepository @Inject constructor(
     private val heroDao: DisneyHeroDao
 ) {
 
-    suspend fun getDisneyHeroes(): Response<AllDisneyHeroesResponse> {
-        return api.getDisneyHeroes()
+    suspend fun getDisneyHeroes(page: Int, limit: Int): Response<AllDisneyHeroesResponse> {
+        return api.getDisneyHeroes(page, limit)
     }
 
     suspend fun getImageDisneyHero(id: String): Response<DisneyHeroResponse> {

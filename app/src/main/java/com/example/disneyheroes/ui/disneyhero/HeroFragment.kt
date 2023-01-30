@@ -4,9 +4,12 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.view.animation.AnimationUtils
 import androidx.core.os.bundleOf
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.commit
 import androidx.fragment.app.viewModels
+import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.disneyheroes.R
 import com.example.disneyheroes.databinding.FragmentHeroBinding
@@ -15,8 +18,9 @@ import com.example.disneyheroes.models.InfoHero
 import com.example.disneyheroes.ui.disneyhero.infoheroadapter.InfoHeroAdapter
 import com.example.disneyheroes.ui.listdisneyheroes.ListHeroesFragment
 import com.example.disneyheroes.utils.loadUrl
-import com.example.disneyheroes.utils.navigationFragments
 import dagger.hilt.android.AndroidEntryPoint
+import kotlinx.coroutines.delay
+import kotlinx.coroutines.launch
 
 @AndroidEntryPoint
 class HeroFragment : Fragment() {
@@ -41,19 +45,40 @@ class HeroFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        binding.buttonBack.setOnClickListener {
-            navigationFragments(parentFragmentManager, ListHeroesFragment())
-        }
+        binding.apply {
+            buttonBack.setOnClickListener {
+                parentFragmentManager.commit {
+                    setCustomAnimations(
+                        R.anim.anim_open_hero_fragment,
+                        R.anim.anim_close_list_heroes_fragment,
+                        R.anim.anim_open_hero_fragment,
+                        R.anim.anim_close_list_heroes_fragment
+                    )
+                    replace(R.id.container, ListHeroesFragment())
+                }
+            }
 
-        binding.buttonLike.setOnClickListener {
-            if (!currentHero.isFavorite) {
-                binding.buttonLike.setImageResource(R.drawable.ic_baseline_favorite_30)
-                viewModel.setFavoriteHero(currentHero.id.toString(), true)
-                viewModel.selectFavoriteHero(currentHero)
-            } else {
-                binding.buttonLike.setImageResource(R.drawable.ic_baseline_favorite_border_30)
-                viewModel.setFavoriteHero(currentHero.id.toString(), false)
-                viewModel.selectFavoriteHero(currentHero)
+            buttonLike.setOnClickListener {
+                if (!currentHero.isFavorite) {
+                    showBannerView(
+                        title = getString(R.string.hero_successfully_added_to_favorites),
+                        imageId = R.drawable.ic_baseline_done_28
+                    )
+                    buttonLike.setImageResource(R.drawable.ic_baseline_favorite_30)
+                    viewModel.setFavoriteHero(currentHero.id.toString(), true)
+                    viewModel.selectFavoriteHero(currentHero)
+                    val anim =
+                        AnimationUtils.loadAnimation(requireContext(), R.anim.anim_button_like)
+                    buttonLike.startAnimation(anim)
+                } else {
+                    showBannerView(
+                        title = getString(R.string.hero_successfully_removed_from_favorites),
+                        imageId = R.drawable.ic_baseline_remove_circle_outline_28
+                    )
+                    buttonLike.setImageResource(R.drawable.ic_baseline_favorite_border_30)
+                    viewModel.setFavoriteHero(currentHero.id.toString(), false)
+                    viewModel.selectFavoriteHero(currentHero)
+                }
             }
         }
 
@@ -84,6 +109,38 @@ class HeroFragment : Fragment() {
                 layoutManager = LinearLayoutManager(requireContext())
             }
             (adapter as? InfoHeroAdapter)?.submitList(list)
+        }
+    }
+
+    private fun showBannerView(title: String, imageId: Int) {
+        binding.apply {
+            bannerView.visibility = View.VISIBLE
+            bannerView.setTitle(title)
+            bannerView.setImageAddDeleteHero(imageId)
+            buttonBack.isClickable = false
+            buttonLike.isClickable = false
+            val animOpen = AnimationUtils.loadAnimation(
+                requireContext(),
+                R.anim.anim_open_banner_add_delete_favorite
+            )
+            bannerView.startAnimation(animOpen)
+
+            bannerView.setClickClose {
+                buttonBack.isClickable = true
+                buttonLike.isClickable = true
+                val animClose = AnimationUtils.loadAnimation(
+                    requireContext(),
+                    R.anim.anim_close_banner_add_delete_favorite
+                )
+                bannerView.startAnimation(animClose)
+            }
+
+            lifecycleScope.launch {
+                delay(5_000)
+                bannerView.visibility = View.GONE
+                buttonBack.isClickable = true
+                buttonLike.isClickable = true
+            }
         }
     }
 

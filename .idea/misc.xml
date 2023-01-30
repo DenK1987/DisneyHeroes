@@ -3,33 +3,29 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/User/AndroidStudioProjects/DisneyHeroes/app/src/main/res/drawable-v24/bg_button.xml" value="0.226" />
-        <entry key="..\:/Users/User/AndroidStudioProjects/DisneyHeroes/app/src/main/res/drawable-v24/bg_image_button_checked.xml" value="0.226" />
-        <entry key="..\:/Users/User/AndroidStudioProjects/DisneyHeroes/app/src/main/res/drawable-v24/bg_image_button_unchecked.xml" value="0.226" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/DisneyHeroes/app/src/main/res/drawable/bg_banner_add_delete_favorite.xml" value="0.226" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/DisneyHeroes/app/src/main/res/drawable/bg_banner_view.xml" value="0.226" />
         <entry key="..\:/Users/User/AndroidStudioProjects/DisneyHeroes/app/src/main/res/drawable/bg_button.xml" value="0.226" />
-        <entry key="..\:/Users/User/AndroidStudioProjects/DisneyHeroes/app/src/main/res/drawable/bg_image_button_back.xml" value="0.226" />
-        <entry key="..\:/Users/User/AndroidStudioProjects/DisneyHeroes/app/src/main/res/drawable/bg_image_button_checked.xml" value="0.226" />
-        <entry key="..\:/Users/User/AndroidStudioProjects/DisneyHeroes/app/src/main/res/drawable/bg_image_button_like.xml" value="0.226" />
-        <entry key="..\:/Users/User/AndroidStudioProjects/DisneyHeroes/app/src/main/res/drawable/bg_image_button_unchecked.xml" value="0.226" />
-        <entry key="..\:/Users/User/AndroidStudioProjects/DisneyHeroes/app/src/main/res/drawable/bg_image_hero.xml" value="0.226" />
-        <entry key="..\:/Users/User/AndroidStudioProjects/DisneyHeroes/app/src/main/res/drawable/bg_name_category.xml" value="0.226" />
-        <entry key="..\:/Users/User/AndroidStudioProjects/DisneyHeroes/app/src/main/res/drawable/ic_baseline_arrow_back_24.xml" value="0.226" />
-        <entry key="..\:/Users/User/AndroidStudioProjects/DisneyHeroes/app/src/main/res/drawable/ic_baseline_arrow_back_30.xml" value="0.226" />
-        <entry key="..\:/Users/User/AndroidStudioProjects/DisneyHeroes/app/src/main/res/drawable/ic_baseline_favorite_24.xml" value="0.226" />
-        <entry key="..\:/Users/User/AndroidStudioProjects/DisneyHeroes/app/src/main/res/drawable/ic_baseline_favorite_30.xml" value="0.226" />
-        <entry key="..\:/Users/User/AndroidStudioProjects/DisneyHeroes/app/src/main/res/drawable/ic_baseline_favorite_border_30.xml" value="0.226" />
-        <entry key="..\:/Users/User/AndroidStudioProjects/DisneyHeroes/app/src/main/res/font/abeezee.xml" value="0.39076923076923076" />
-        <entry key="..\:/Users/User/AndroidStudioProjects/DisneyHeroes/app/src/main/res/layout/activity_main.xml" value="0.35260416666666666" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/DisneyHeroes/app/src/main/res/drawable/ic_baseline_check_circle_24.xml" value="0.226" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/DisneyHeroes/app/src/main/res/drawable/ic_baseline_check_circle_outline_24.xml" value="0.226" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/DisneyHeroes/app/src/main/res/drawable/ic_baseline_close_24.xml" value="0.226" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/DisneyHeroes/app/src/main/res/drawable/ic_baseline_done_24.xml" value="0.226" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/DisneyHeroes/app/src/main/res/drawable/ic_baseline_done_28.xml" value="0.226" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/DisneyHeroes/app/src/main/res/drawable/ic_baseline_error_24.xml" value="0.226" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/DisneyHeroes/app/src/main/res/drawable/ic_baseline_info_24.xml" value="0.226" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/DisneyHeroes/app/src/main/res/drawable/ic_baseline_remove_circle_24.xml" value="0.226" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/DisneyHeroes/app/src/main/res/drawable/ic_baseline_remove_circle_28.xml" value="0.226" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/DisneyHeroes/app/src/main/res/drawable/ic_baseline_remove_circle_outline_24.xml" value="0.226" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/DisneyHeroes/app/src/main/res/drawable/ic_baseline_remove_circle_outline_28.xml" value="0.226" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/DisneyHeroes/app/src/main/res/drawable/ic_baseline_task_alt_24.xml" value="0.226" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/DisneyHeroes/app/src/main/res/layout/activity_main.xml" value="0.1778115501519757" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/DisneyHeroes/app/src/main/res/layout/fragment_hero.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/User/AndroidStudioProjects/DisneyHeroes/app/src/main/res/layout/fragment_list_heroes.xml" value="0.36666666666666664" />
-        <entry key="..\:/Users/User/AndroidStudioProjects/DisneyHeroes/app/src/main/res/layout/fragment_one_hero.xml" value="0.365625" />
-        <entry key="..\:/Users/User/AndroidStudioProjects/DisneyHeroes/app/src/main/res/layout/fragment_page.xml" value="0.365625" />
         <entry key="..\:/Users/User/AndroidStudioProjects/DisneyHeroes/app/src/main/res/layout/fragment_start_app.xml" value="0.36666666666666664" />
-        <entry key="..\:/Users/User/AndroidStudioProjects/DisneyHeroes/app/src/main/res/layout/fragment_tab.xml" value="0.365625" />
-        <entry key="..\:/Users/User/AndroidStudioProjects/DisneyHeroes/app/src/main/res/layout/item_category_data.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/User/AndroidStudioProjects/DisneyHeroes/app/src/main/res/layout/item_hero.xml" value="0.36666666666666664" />
-        <entry key="..\:/Users/User/AndroidStudioProjects/DisneyHeroes/app/src/main/res/layout/item_hero_info.xml" value="0.365625" />
-        <entry key="..\:/Users/User/AndroidStudioProjects/DisneyHeroes/app/src/main/res/layout/item_list_info.xml" value="0.365625" />
-        <entry key="..\:/Users/User/AndroidStudioProjects/DisneyHeroes/app/src/main/res/layout/item_name_info.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/DisneyHeroes/app/src/main/res/layout/view_banner.xml" value="0.365625" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/DisneyHeroes/app/src/main/res/layout/view_banner_add_delete_favorite.xml" value="0.33" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/DisneyHeroes/app/src/main/res/layout/view_banner_network_error.xml" value="0.365625" />
       </map>
     </option>
   </component>
