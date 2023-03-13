@@ -5,10 +5,10 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.commit
+import com.example.disneyheroes.R
 import com.example.disneyheroes.databinding.FragmentStartAppBinding
 import com.example.disneyheroes.ui.listdisneyheroes.ListHeroesFragment
-import com.example.disneyheroes.utils.navigationFragments
-import com.example.disneyheroes.utils.navigationFragmentsAndAddToBackStack
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -29,7 +29,16 @@ class StartAppFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         binding.buttonGetStarted.setOnClickListener {
-            navigationFragmentsAndAddToBackStack(parentFragmentManager, ListHeroesFragment())
+            parentFragmentManager.commit {
+                setCustomAnimations(
+                    R.anim.anim_open_list_heroes_fragment,
+                    R.anim.anim_close_list_heroes_fragment,
+                    R.anim.anim_open_list_heroes_fragment,
+                    R.anim.anim_close_list_heroes_fragment
+                )
+                replace(R.id.container, ListHeroesFragment())
+                addToBackStack("StartAppFragment")
+            }
         }
     }
 }

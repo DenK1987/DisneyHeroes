@@ -17,4 +17,5 @@
     <color name="hero_fragment">#03174C</color>
     <color name="image_hero_fragment">#AFDBC5</color>
     <color name="red">#FF0000</color>
+    <color name="banner_network_error">#E6B8B8B8</color>
 </resources>

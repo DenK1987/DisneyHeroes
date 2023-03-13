@@ -6,12 +6,12 @@
         <item name="android:textColor">@color/color_text_button</item>
         <item name="android:fontFamily">@font/helvetica_neue_medium_extended</item>
         <item name="android:background">@drawable/bg_button</item>
-        <item name="android:elevation">@dimen/dp_1</item>
+
         <item name="android:shadowColor">@color/color_button</item>
         <item name="android:shadowDx">10</item>
         <item name="android:shadowDy">10</item>
         <item name="android:shadowRadius">1</item>
-        <item name="android:translationZ">@dimen/dp_1</item>
+
     </style>
 
     <style name="Text">
@@ -49,6 +49,13 @@
         <item name="android:shadowRadius">5</item>
         <item name="android:elevation">@dimen/dp_2</item>
         <item name="android:background">@drawable/bg_name_category</item>
+    </style>
+
+    <style name="TextBannerAddDeleteFavorite">
+        <item name="android:textSize">@dimen/sp_22</item>
+        <item name="android:textColor">@color/color_icon_button</item>
+        <item name="android:fontFamily">@font/disney_park</item>
+        <item name="android:textStyle">bold</item>
     </style>
 
 </resources>
